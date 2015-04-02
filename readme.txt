@@ -80,7 +80,7 @@ add to init.rc
     write /dev/cpuctl/apps/bg_non_interactive/cpu.rt_runtime_us 700000
     write /dev/cpuctl/apps/bg_non_interactive/cpu.rt_period_us 1000000
 
-
+"evdev_trace -i" (from mce-tools.rpm
 
 Lots of patches to build an image:
 So you booted your Sailfish OS rootfs? Congrats. No GUI? Oh dear :)
