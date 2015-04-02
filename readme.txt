@@ -47,6 +47,14 @@ Changed /usr/lib/qt5/qml/Sailfish/Silica/ApplicationWindow.qml
 property bool _transpose: (screenRotation % 180) != 270
 property int _defaultPageOrientations: Orientation.InvertedLandscape
 
+DPI:
+dconf write /desktop/sailfish/silica/theme_pixel_ratio 0.9
+
+
+
+
+
+
 Lots of patches to build an image:
 So you booted your Sailfish OS rootfs? Congrats. No GUI? Oh dear :)
 
