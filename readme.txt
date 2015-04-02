@@ -20,10 +20,10 @@ mount_stowaways() {
 	mkdir /target
 
 	mount $DATA_PARTITION /data
+	ln -s /data/media/0/.stowaways /data
 	mount --bind /data/${data_subdir}/.stowaways/${DEFAULT_OS} /target
 	mkdir /target/data # in new fs
 	mount --bind /data/${data_subdir} /target/data
-	ln -s /data/media/0/.stowaways /data
     else
         echo "Failed to mount /target, device node '$DATA_PARTITION' not found!" >> /diagnosis.log
     fi
