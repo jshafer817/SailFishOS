@@ -1,5 +1,36 @@
 # SailFishOS
 
+tenderloin.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+  <manifest>
+
+    <project path="hardware/atheros/wlan"
+      name="jshafer817/android_hardware_atheros_wlan"
+      remote="github"
+      revision="cm-11.0"/>
+
+   <project path="external/backports-wireless"
+      name="jshafer817/android_external_backports-wireless"
+      remote="github"
+      revision="3.10-2"/>
+
+   <project path="device/hp/tenderloin"
+      name="jshafer817/sailfish_device_hp_tenderloin30"
+      remote="github"
+      revision="master"/>
+
+    <project path="kernel/hp/tenderloin"
+      name="jshafer817/sailfish_kernel_hp_tenderloin30"
+      remote="github"
+      revision="master"/>
+
+    <project path="vendor/hp/tenderloin"
+      name="jshafer817/sailfish_vendor_hp_tenderloin30"
+      remote="github"
+      revision="master"/>
+
+  </manifest>
+
 
 Ramdisk\LVM Partitions:
 mount_stowaways() {
