@@ -1,0 +1,40 @@
+ui_print("");
+ui_print("========================================");
+ui_print("Hybris Installer");
+ui_print("========================================");
+ui_print("      Device: tenderloin");
+ui_print("     Version: 1.1.2.16");
+ui_print("       Image: sailfishos-tenderloin-release-1.1.2.16-my1.tar.bz2");
+ui_print("        Size: 268M");
+ui_print("  Partitions:");
+ui_print("    /boot -> /dev/block/mmcblk0p13");
+ui_print("    /data -> /dev/store/cm-data");
+ui_print("========================================");
+ui_print("");
+
+assert(getprop("ro.product.device") == "tenderloin" || getprop("ro.build.product") == "tenderloin" || getprop("ro.cm.device") == "tenderloin");
+
+ui_print("Device check succeeded, mounting filesystems ...");
+mount("ext4", "EMMC", "/dev/store/cm-data", "/data");
+mount("ext3", "EMMC", "/dev/block/mmcblk0p13", "/boot");
+
+ui_print("Copying filesystem archive ...");
+package_extract_file("sailfishos-tenderloin-release-1.1.2.16-my1.tar.bz2", "/data/media/0/sailfishos-rootfs.tar.bz2");
+ui_print("Copying installation script ...");
+package_extract_file("updater-unpack.sh", "/tmp/updater-unpack.sh");
+
+ui_print("Running installation script ...");
+set_perm(0, 0, 755, "/tmp/updater-unpack.sh");
+run_program("/tmp/updater-unpack.sh");
+
+ui_print("Flashing hybris-boot.img ...");
+package_extract_file("hybris-boot.img", "/boot/uImage.SailFishOS");
+symlink("/data/media/0/.stowaways", "/data/.stowaways");
+
+
+ui_print("Unmounting filesystems ...");
+unmount("/data");
+unmount("/boot");
+
+ui_print("Done!");
+
