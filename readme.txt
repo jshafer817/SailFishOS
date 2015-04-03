@@ -30,6 +30,11 @@ mount_stowaways() {
     mount
 }
 
+Grahpics:
+hwc.patch in cm11
+patch hwcomposer-plugin fro Nokius
+Be sure debugfs is not mounted!
+
 Wifi:
 depmod -a -v
 Add /etc/modulesload.p/ath6kl.conf
