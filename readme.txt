@@ -58,6 +58,12 @@ dconf write /desktop/sailfish/silica/theme_pixel_ratio 0.9
 MiniSF Service:
 minisf.cpp uint32_t maxLayerZ, bool isCpuConsumer)
 
+Browser:
+BrowserPage.qml
+ Browser.DownloadRemorsePopup { id: downloadPopup }
+        portrait: browserPage.isLandscape
+    }
+
 Video Acceleration:
 add to init.rc
 # Create cgroup mount points for process groups
