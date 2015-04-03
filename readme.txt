@@ -47,7 +47,6 @@ Bluetooth (just works)
 Sound: Used Hammerheads /etc/pulse directory but renamed  arm_qualcomm_msm_8974_hammerhead_flattened_device_tree_000b.pa to default.pa
 
 Screen Rotation:
-Kernel:Switched sensors to portait mode.
 Changed /usr/lib/qt5/qml/Sailfish/Silica/ApplicationWindow.qml
 property bool _transpose: (screenRotation % 180) != 270
 property int _defaultPageOrientations: Orientation.InvertedLandscape
