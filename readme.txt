@@ -54,9 +54,6 @@ property int _defaultPageOrientations: Orientation.InvertedLandscape
 DPI:
 dconf write /desktop/sailfish/silica/theme_pixel_ratio 0.9
 
-MiniSF Service:
-minisf.cpp uint32_t maxLayerZ, bool isCpuConsumer)
-
 Browser:
 BrowserPage.qml
  Browser.DownloadRemorsePopup { id: downloadPopup }
