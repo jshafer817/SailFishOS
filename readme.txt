@@ -36,11 +36,30 @@ patch hwcomposer-plugin fro Nokius
 Be sure debugfs is not mounted!
 
 Wifi:
+3.0 Kernel:
 depmod -a -v
 Add /etc/modulesload.p/ath6kl.conf
 compat
 cfg80211
 ath6kl
+
+3.4 Kernel:
+Create service and kernel modules instead of builtin:
+[Unit]
+Description=ATH6KL
+Before=network.target
+
+[Service]
+ExecStart=/usr/bin/enable_ath6kl
+
+[Install]
+WantedBy=multi-user.target
+--EOF--
+/usr/bin/enable_ath6kl
+#!/bin/bash
+insmod /cfg80211.ko
+insmod /ath.ko
+insmod /ath6kl.ko
 
 Bluetooth (just works)
 
