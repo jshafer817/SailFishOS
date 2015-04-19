@@ -82,6 +82,11 @@ BrowserPage.qml
  Browser.DownloadRemorsePopup { id: downloadPopup }
         portrait: browserPage.isLandscape
     }
+    
+    
+Video Codecs:
+ln -s /system/etc/media_codecs.xml /etc
+ln -s /system/etc/media_profiles.xml /etc
 
 libgstav:
 for module in gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav; do
