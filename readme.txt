@@ -61,7 +61,11 @@ insmod /cfg80211.ko
 insmod /ath.ko
 insmod /ath6kl.ko
 
-Bluetooth (just works)
+Bluetooth:
+3.4 Only:
+bluetooth.service changes.
+-ConditionPathIsDirectory=/sys/kernel/debug/bluetooth
+
 
 Sound: Used Hammerheads /etc/pulse directory but renamed  arm_qualcomm_msm_8974_hammerhead_flattened_device_tree_000b.pa to default.pa
 
