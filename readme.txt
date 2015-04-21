@@ -52,6 +52,7 @@ Description=ATH6KL
 Before=network.target
 
 [Service]
+RemainAfterExit=true
 ExecStart=/usr/bin/enable_ath6kl
 
 [Install]
