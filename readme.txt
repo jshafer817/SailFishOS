@@ -62,12 +62,19 @@ WantedBy=multi-user.target
 /usr/bin/enable_ath6kl
 
 #!/bin/bash
-rfkill unblock all
-bcattach &
-sleep 20
+systemctl stop bluetooth.service
+systemctl stop connman.service
 insmod /cfg80211.ko
 insmod /ath.ko
 insmod /ath6kl.ko
+sleep 5
+rfkill unblock all
+/usr/bin/bcattach &
+sleep 15
+rfkill unblock all
+hciconfig hci0 up
+systemctl start bluetooth.service
+systemctl start connman.service
 
 Bluetooth:
 3.4 Only:
