@@ -31,6 +31,7 @@ mount_stowaways() {
 }
 
 zypper install strace rfkill
+ln -s /usr/libexec/droid-hybris/system/bin /usr/bin
 
 Grahpics:
 hwc.patch in cm11
