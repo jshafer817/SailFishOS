@@ -33,7 +33,10 @@ mount_stowaways() {
 zypper install strace rfkill
 ln -s /usr/libexec/droid-hybris/system/bin /usr/bin
 
-Grahpics:
+Touchscreen:
+/usr/bin/tssrv
+
+Graphics:
 hwc.patch in cm11
 patch hwcomposer-plugin fro Nokius
 Be sure debugfs is not mounted!
