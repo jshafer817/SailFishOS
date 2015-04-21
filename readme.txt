@@ -30,6 +30,8 @@ mount_stowaways() {
     mount
 }
 
+zypper install strace rfkill
+
 Grahpics:
 hwc.patch in cm11
 patch hwcomposer-plugin fro Nokius
