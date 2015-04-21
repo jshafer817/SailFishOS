@@ -80,6 +80,7 @@ Bluetooth:
 3.4 Only:
 bluetooth.service changes.
 -ConditionPathIsDirectory=/sys/kernel/debug/bluetooth
+/var/lib/connman/settings BlueTooth should be enabled to prevent rfkill.
 
 
 Sound: Used Hammerheads /etc/pulse directory but renamed  arm_qualcomm_msm_8974_hammerhead_flattened_device_tree_000b.pa to default.pa
