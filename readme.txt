@@ -39,14 +39,6 @@ patch hwcomposer-plugin fro Nokius
 Be sure debugfs is not mounted!
 
 Wifi:
-3.0 Kernel:
-depmod -a -v
-Add /etc/modulesload.p/ath6kl.conf
-compat
-cfg80211
-ath6kl
-
-3.4 Kernel:
 Create service and kernel modules instead of builtin:
 [Unit]
 Description=ATH6KL
