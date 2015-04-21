@@ -55,8 +55,13 @@ ExecStart=/usr/bin/enable_ath6kl
 [Install]
 WantedBy=multi-user.target
 --EOF--
+
 /usr/bin/enable_ath6kl
+
 #!/bin/bash
+rfkill unblock all
+bcattach &
+sleep 20
 insmod /cfg80211.ko
 insmod /ath.ko
 insmod /ath6kl.ko
