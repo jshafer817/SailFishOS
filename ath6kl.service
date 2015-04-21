@@ -1,0 +1,10 @@
+[Unit]
+Description=ATH6KL
+Before=network.target
+
+[Service]
+RemainAfterExit=true
+ExecStart=/usr/bin/enable_ath6kl
+
+[Install]
+WantedBy=multi-user.target
