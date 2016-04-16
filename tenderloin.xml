@@ -6,18 +6,28 @@
       remote="github"
       revision="cm-11.0"/>
 
+    <project path="external/backports-wireless"
+      name="jshafer817/android_external_backports-wireless"
+      remote="github"
+      revision="mm-6.0"/>
+
     <project path="device/hp/tenderloin"
-      name="jshafer817/sailfish_device_hp_tenderloin34"
+      name="jshafer817/sailfish_device_hp_tenderloin"
       remote="github"
       revision="master"/>
 
-    <project path="kernel/hp/tenderloin"
-      name="jshafer817/sailfish_kernel_hp_tenderloin34"
+    <project path="device/hp/tenderloin-common"
+      name="jshafer817/sailfish_device_hp_tenderloin-common"
       remote="github"
       revision="master"/>
 
     <project path="vendor/hp/tenderloin"
-      name="jshafer817/sailfish_vendor_hp_tenderloin34"
+      name="jshafer817/sailfish_vendor_hp_tenderloin"
+      remote="github"
+      revision="master"/>
+
+    <project path="kernel/hp/tenderloin"
+      name="jshafer817/sailfish_kernel_hp_tenderloin"
       remote="github"
       revision="master"/>
 
