@@ -128,6 +128,25 @@ systemctl stop user@100000.service
 test simple hwc as root:
 EGL_PLATFORM=hwcomposer test_hwcomposer
 if you use display-caf, apply this patch: http://pastebin.com/TsfSwdXG
+$ANDROID_ROOT/hardware/qcom/display-caf/libhwcomposer/hwc.cpp
+ 
+line 89:
+replace
+for(int i = 0; i < MAX_DISPLAYS; i++)
+with
+for(int i = 0; i < numDisplays; i++)
+ 
+line 215:
+replace
+for (int32_t i = numDisplays; i >= 0; i--)
+with
+for (int32_t i = numDisplays-1; i >= 0; i--)
+ 
+line 456:
+replace
+for (uint32_t i = 0; i <= numDisplays; i++)
+with
+for (uint32_t i = 0; i < numDisplays; i++)
 if strace dies after open("/sys/kernel/debug/tracing/trace_marker..., perform
 systemctl mask sys-kernel-debug.mount
 minimer:
